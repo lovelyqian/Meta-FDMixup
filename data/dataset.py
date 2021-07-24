@@ -20,7 +20,7 @@ class SimpleDataset:
   def __getitem__(self,i):
     image_path = os.path.join(self.meta['image_names'][i])
     
-    image_path = image_path[:12]+'2'+image_path[13:]
+    #image_path = image_path[:12]+'2'+image_path[13:]
     img = Image.open(image_path).convert('RGB')
     img = self.transform(img)
     target = self.target_transform(self.meta['image_labels'][i])
@@ -44,7 +44,7 @@ class RandomLabeledTargetDataset:
     idx = random.randint(0, len(self.meta['image_names'])-1)
     image_path = self.meta['image_names'][idx]
    
-    image_path = image_path[:12]+'2'+image_path[13:] 
+    #image_path = image_path[:12]+'2'+image_path[13:] 
     img = Image.open(image_path).convert('RGB')
     img = self.transform(img)
     target = self.target_transform(self.meta['image_labels'][idx])
@@ -136,7 +136,7 @@ class SubDataset:
     #print('sub dataset:')
     image_path = os.path.join( self.sub_meta[i])
     #print(image_path)
-    image_path = image_path[:12]+'2'+image_path[13:] 
+    #image_path = image_path[:12]+'2'+image_path[13:] 
 
     img = Image.open(image_path).convert('RGB')
     img = self.transform(img)
