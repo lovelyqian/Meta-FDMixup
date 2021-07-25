@@ -1,6 +1,8 @@
 # 1 Meta-FDMIxup
 
-Repository for the paper :  **Meta-FDMixup: Cross-Domain Few-Shot Learning Guided byLabeled Target Data**
+Repository for the paper :  
+
+**Meta-FDMixup: Cross-Domain Few-Shot Learning Guided byLabeled Target Data.** (ACM MM 2021)
 
 [to add paper link]()
 
@@ -42,23 +44,68 @@ Totally five datasets inculding miniImagenet, CUB, Cars, Places, and Plantae are
 3. Under our new setting, we randomly select $num_{target}$ labeled images from the target base set to form the auxiliary set. The splits we used are provided in 'Sources/'.
 
 
+# 3 pretrained ckps
+We provide several pretrained ckps.
 
-# 3 usage
-## 3.1 network pretraining
+You can download and put them in the 'output/pretrained_ckps/'
+
+## 3.1 **pretrained model trained on the miniImagenet**
+- [pretrained_model_399.tar](https://drive.google.com/file/d/1iYu3lvYDixVNPYjmyi0MON8-X3aRN4n2/view?usp=sharing)
+
+
+## 3.2 **full model meta-trained on the target datasets**
+
+Since our method is target-set specific, we have to train a model for each target dataset.
+
+- [full_model_5shot_target_cub_399.tar](https://drive.google.com/file/d/1UpRWkvUZ4FqJx542SdhL2AY-s8LhYi9y/view?usp=sharing)
+
+- [full_model_5shot_target_cars_399.tar](https://drive.google.com/file/d/1b_XUQBGuG2FYhKq_R9smxiBOLWvpFHhn/view?usp=sharing)
+
+- [full_model_5shot_target_places_399.tar](https://drive.google.com/file/d/1RLN3PWbC9FjCGsL4cn_iYqMv-ER5_bo9/view?usp=sharing)
+
+- [full_model_5shot_target_plantae_399.tar](https://drive.google.com/file/d/11S_NyQkY4VV9T7Fb46tAxYO7ZO5YoYYj/view?usp=sharing)
+
+Notably, as we stated in the paper, we use the last checkpoint for target dataset, while the best model on the validation set of miniImagenet is used for miniImagenet. Here, we provide the model of 'miniImagenet|CUB' as an example.
+
+- [full_model_5shot_target_cub_best_eval.tar](https://drive.google.com/file/d/1eUlyHA3dov37YOh6phE25RUmaU_vYMiX/view?usp=sharing)
+
+
+
+# 4 usage
+## 4.1 network pretraining
 ```
 python3 network_train.py --stage pretrain  --name pretrain-model --train_aug 
 ```
 
-## 3.2 pretrained model testing
+If you have downloaded our [pretrained_model_399.tar](https://drive.google.com/file/d/1iYu3lvYDixVNPYjmyi0MON8-X3aRN4n2/view?usp=sharing), you can just skip this step.
+
+
+## 4.2 pretrained model testing
 ```
 # test source dataset (miniImagenet)
-python network_test.py --ckp_path output/checkpoints/pretrain-model/399.tar --stage pretrain --dataset miniImagenet --save_epoch 399 --n_shot 5 
+python network_test.py --ckp_path output/checkpoints/pretrain-model/399.tar --stage pretrain --dataset miniImagenet --n_shot 5 
 
 # test target dataset e.g. cub
-python network_test.py --ckp_path output/checkpoints/pretrain-model/399.tar --stage pretrain --dataset cub --save_epoch 399 --n_shot 5
+python network_test.py --ckp_path output/checkpoints/pretrain-model/399.tar --stage pretrain --dataset cub --n_shot 5
 ```
 
-## 3.3 network meta-training
+you can test our [pretrained_model_399.tar](https://drive.google.com/file/d/1iYu3lvYDixVNPYjmyi0MON8-X3aRN4n2/view?usp=sharing) in the same way:
+
+
+```
+# test source dataset (miniImagenet)
+python network_test.py --ckp_path output/pretrained_ckps/pretrained_model_399.tar --stage pretrain --dataset miniImagenet --n_shot 5 
+
+
+# test target dataset e.g. cub
+python network_test.py --ckp_path output/pretrained_ckps/pretrained_model_399.tar --stage pretrain --dataset cub --n_shot 5
+```
+
+
+
+
+## 4.3 network meta-training
+
 ```
 # traget set: CUB
 python3 network_train.py --stage metatrain --name metatrain-model-5shot-cub --train_aug --warmup output/checkpoints/pretrain-model/399.tar --target_set cub --n_shot 5
@@ -73,8 +120,36 @@ python3 network_train.py --stage metatrain --name metatrain-model-5shot-places -
 python3 network_train.py --stage metatrain --name metatrain-model-5shot-plantae --train_aug --warmup output/checkpoints/pretrain-model/399.tar --target_set plantae --n_shot 5
 ```
 
-# 4 pretrained ckps
-We will release our pretrained models.
+Also, you can use our [pretrained_model_399.tar](https://drive.google.com/file/d/1iYu3lvYDixVNPYjmyi0MON8-X3aRN4n2/view?usp=sharing) for warmup:
+
+```
+# traget set: CUB
+python3 network_train.py --stage metatrain --name metatrain-model-5shot-cub --train_aug --warmup output/pretrained_ckps/pretrained_model_399.tar --target_set cub --n_shot 5
+```
+
+
+## 4.4 network testing
+
+To test our provided full models:
+```
+# test target dataset (CUB)
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cub_399.tar --stage meta-train --dataset cub --n_shot 5 
+
+# test target dataset (Cars)
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cars_399.tar --stage meta-train --dataset cars --n_shot 5 
+
+# test target dataset (Places)
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage meta-train --dataset places --n_shot 5 
+
+# test target dataset (Plantae)
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage meta-train --dataset plantae --n_shot 5 
+
+
+# test source dataset (miniImagenet|CUB)
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cub_best_eval.tar --stage meta-train --dataset miniImagenet --n_shot 5 
+```
+
+To test your models, just modify the 'ckp-path'.
 
 
 # 5 citing
