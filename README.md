@@ -84,4 +84,4 @@ to update
 ```
 
 # 6 Note
-Notably, our code is built upon the implementation of [FWT-repo]. 
+Notably, our code is built upon the implementation of [FWT-repo](https://github.com/hytseng0509/CrossDomainFewShot). 
