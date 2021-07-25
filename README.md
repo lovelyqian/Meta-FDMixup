@@ -6,9 +6,9 @@ Repository for the paper :  **Meta-FDMixup: Cross-Domain Few-Shot Learning Guide
 
 
 
-![image](https://user-images.githubusercontent.com/49612387/126885360-0e1bb895-cd4b-4ad7-9739-9b2891eec277.png)
+![image](https://user-images.githubusercontent.com/49612387/126885825-72bdcec9-61b9-484e-a11f-5af812d0f6ba.png)
 
-If you have any questions, feel free to contact me. My email is fuyq20@fudan.edu.cn.
+If you have any questions, feel free to contact me.  My email is fuyq20@fudan.edu.cn.
 
 
 # 2 setup and datasets
