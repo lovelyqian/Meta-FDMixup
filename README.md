@@ -4,7 +4,7 @@ Repository for the paper :
 
 **Meta-FDMixup: Cross-Domain Few-Shot Learning Guided byLabeled Target Data.** (ACM MM 2021)
 
-[to add paper link]()
+[paper](https://arxiv.org/abs/2107.11978)
 
 
 
