@@ -155,7 +155,12 @@ To test your models, just modify the 'ckp-path'.
 # 5 citing
 If you find our paper or this code useful for your research, please cite us:
 ```
-to update
+@article{fu2021meta,
+  title={Meta-FDMixup: Cross-Domain Few-Shot Learning Guided by Labeled Target Data},
+  author={Fu, Yuqian and Fu, Yanwei and Jiang, Yu-Gang},
+  journal={arXiv preprint arXiv:2107.11978},
+  year={2021}
+}
 ```
 
 # 6 Note
