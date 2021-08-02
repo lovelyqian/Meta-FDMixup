@@ -133,20 +133,20 @@ python3 network_train.py --stage metatrain --name metatrain-model-5shot-cub --tr
 To test our provided full models:
 ```
 # test target dataset (CUB)
-python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cub_399.tar --stage meta-train --dataset cub --n_shot 5 
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cub_399.tar --stage metatrain --dataset cub --n_shot 5 
 
 # test target dataset (Cars)
-python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cars_399.tar --stage meta-train --dataset cars --n_shot 5 
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cars_399.tar --stage metatrain --dataset cars --n_shot 5 
 
 # test target dataset (Places)
-python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage meta-train --dataset places --n_shot 5 
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage metatrain --dataset places --n_shot 5 
 
 # test target dataset (Plantae)
-python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage meta-train --dataset plantae --n_shot 5 
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage metatrain --dataset plantae --n_shot 5 
 
 
 # test source dataset (miniImagenet|CUB)
-python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cub_best_eval.tar --stage meta-train --dataset miniImagenet --n_shot 5 
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_cub_best_eval.tar --stage metatrain --dataset miniImagenet --n_shot 5 
 ```
 
 To test your models, just modify the 'ckp-path'.
