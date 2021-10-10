@@ -6,8 +6,9 @@ Repository for the paper :
 
 [paper](https://arxiv.org/abs/2107.11978)
 
-[News! the representation video loaded in 2021/10/06](https://www.bilibili.com/video/BV1xT4y1f7B6?spm_id_from=333.999.0.0)
+[News! the representation video loaded in 2021/10/06 in Bilibili](https://www.bilibili.com/video/BV1xT4y1f7B6?spm_id_from=333.999.0.0)
 
+[News! the representation video loaded in 2021/10/10 in Youtube](https://www.youtube.com/watch?v=G8Mlde4FpsU)
 
 
 ![image](https://user-images.githubusercontent.com/49612387/126885825-72bdcec9-61b9-484e-a11f-5af812d0f6ba.png)
