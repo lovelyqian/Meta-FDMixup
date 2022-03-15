@@ -1,4 +1,4 @@
-# 1 Meta-FDMIxup
+# 1 Meta-FDMixup
 
 Repository for the paper :  
 
