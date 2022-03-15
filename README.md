@@ -173,7 +173,7 @@ To test your models, just modify the 'ckp-path'.
 
 
 # 5 citing
-If you find our paper or this code useful for your research, please cite us:
+If you find our paper or this code useful for your research, please cite us (●°u°●)」:
 ```
 @article{fu2021meta,
   title={Meta-FDMixup: Cross-Domain Few-Shot Learning Guided by Labeled Target Data},
