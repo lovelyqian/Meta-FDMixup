@@ -13,6 +13,23 @@ Repository for the paper :
 
 ![image](https://user-images.githubusercontent.com/49612387/126885825-72bdcec9-61b9-484e-a11f-5af812d0f6ba.png)
 
+**[News! The results of meta-FDMixup under only single source domain are provided in 2022/03/15!]**
+
+By sampling both two episodes from source dataset, we can easily adapt the meta-FDMixup to the single source domain setting. Here, we provide the results on the FWT's and BS-CDFSL's benchmarks with no target data. 
+
+
+
+| **Method** 	| **mini-Imagenet** 	| **CUB** 	| **Cars** 	| **Places** 	| **Plantae** 	| **ChestX** 	| **ISIC** 	| **EuroSAT** 	| **CropDisease** 	|
+|---	|---	|---	|---	|---	|---	|---	|---	|---	|---	|
+| **GNN (1 shot)** 	| 60.77 +- 0.75 	| 45.69 +- 0.68 	| 31.79 +- 0.51 	| 53.10 +- 0.80 	| 35.60 +- 0.56 	| 22.00 +- 0.46 	| 32.02 +- 0.66 	| 63.69 +- 1.03 	| 64.48 +- 1.08 	|
+| **meta-FDMixup (1 shot)** 	| 62.12 +- 0.76 	| 46.38 +- 0.68 	| 31.14 +- 0.51 	| 53.57 +- 0.75  	| 37.89 +- 0.58 	| 22.26 +- 0.45 	| 32.48 +- 0.64 	| 62.97 +- 1.01 	| 66.23 +- 1.03 	|
+| **GNN (1 shot)** 	| 80.87 +- 0.56 	| 62.25 +- 0.65 	| 44.28 +- 0.63 	| 70.84 +- 0.65 	| 52.53 +- 0.59 	| 25.27 +- 0.46 	| 43.94 +- 0.67 	| 83.64 +- 0.77 	| 87.96 +- 0.67 	|
+| **meta-FDMixup (5 shot)** 	| 81.07 +- 0.55  	| 64.71 +- 0.68 	| 41.30 +- 0.58 	| 73.42 +- 0.65 	| 54.62 +- 0.66 	| 24.52 +- 0.44 	| 44.28 +- 0.66 	| 80.48 +- 0.79 	| 87.27 +- 0.69 	|
+
+At most cases, meta-FDMixup still outperforms the GNN base.
+
+
+
 If you have any questions, feel free to contact me.  My email is fuyq20@fudan.edu.cn.
 
 
