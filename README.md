@@ -15,7 +15,7 @@ Repository for the paper :
 
 **[News! The results of meta-FDMixup under only single source domain are provided in 2022/03/15!]**
 
-By sampling both two episodes from source dataset, we can easily adapt the meta-FDMixup to the single source domain setting. Here, we provide the results on the FWT's and BS-CDFSL's benchmarks with no target data. 
+By sampling both two episodes from source dataset, we can easily adapt the meta-FDMixup to the single source domain setting. Here, we provide the 5-way-K-shot results on the FWT's and BS-CDFSL's benchmarks with no target data. 
 
 
 
