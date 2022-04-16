@@ -162,7 +162,7 @@ python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target
 python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage metatrain --dataset places --n_shot 5 
 
 # test target dataset (Plantae)
-python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_places_399.tar --stage metatrain --dataset plantae --n_shot 5 
+python network_test.py --ckp_path output/pretrained_ckps/full_model_5shot_target_plantae_399.tar --stage metatrain --dataset plantae --n_shot 5 
 
 
 # test source dataset (miniImagenet|CUB)
