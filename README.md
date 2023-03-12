@@ -165,6 +165,16 @@ If you find our paper or this code useful for your research, please cite us (●
   journal={arXiv preprint arXiv:2107.11978},
   year={2021}
 }
+
+@article{fu2022generalized,
+  title={Generalized Meta-FDMixup: Cross-Domain Few-Shot Learning Guided by Labeled Target Data},
+  author={Fu, Yuqian and Fu, Yanwei and Chen, Jingjing and Jiang, Yu-Gang},
+  journal={IEEE Transactions on Image Processing},
+  volume={31},
+  pages={7078--7090},
+  year={2022},
+  publisher={IEEE}
+}
 ```
 
 # 6 Note
