@@ -47,6 +47,8 @@ Totally five datasets inculding miniImagenet, CUB, Cars, Places, and Plantae are
 
 3. Under our new setting, we randomly select $num_{target}$ labeled images from the target base set to form the auxiliary set. The splits we used are provided in 'Sources/'.
 
+If you can't find the Plantae dataset, we provide it [here](https://drive.google.com/file/d/1e3TklMlVBCG0XRfEw6DKStJGdmmXgvq5/view?usp=drive_link), please cite its paper. 
+
 
 # 3 pretrained ckps
 We provide several pretrained ckps.
