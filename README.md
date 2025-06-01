@@ -49,6 +49,7 @@ Totally five datasets inculding miniImagenet, CUB, Cars, Places, and Plantae are
 
 If you can't find the Plantae dataset, we provide it [here](https://drive.google.com/file/d/1e3TklMlVBCG0XRfEw6DKStJGdmmXgvq5/view?usp=drive_link), please cite its paper. 
 
+Also, if you can't find the splits for mini-Imagenet (base/val/novel.json),  could download them [here](https://drive.google.com/drive/folders/17xqSY3HDXB-3lSPYlklbCTok3H3nS0Pp).
 
 # 3 pretrained ckps
 We provide several pretrained ckps.
